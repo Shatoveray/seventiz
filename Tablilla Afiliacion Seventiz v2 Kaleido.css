@@ -1,0 +1,392 @@
+/*
+ * SEVENTIZ — Tablilla de afiliación v2 / Kaleido
+ * Diseño aislado para publicaciones en foros externos.
+ *
+ * CAMBIO GLOBAL DE EVENTO
+ * Modifica únicamente las variables del primer bloque y vuelve a publicar este CSS.
+ * Todas las tablillas que carguen la URL actualizada cambiarán juntas.
+ */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap');
+
+.stz-kaleido-aff {
+  --stz2-bg:url('https://i79.servimg.com/u/f79/19/62/25/22/bg-sev10.png');
+  --stz2-primary:#144c85;
+  --stz2-secondary:#a08348;
+  --stz2-highlight:#d6bb80;
+  --stz2-ink:#07111c;
+  --stz2-surface:#101820;
+  --stz2-surface-rgb:16,24,32;
+  --stz2-text:#e9edf0;
+  --stz2-muted:#aeb9c2;
+  --stz2-border:rgba(214,187,128,.38);
+  --stz2-primary-rgb:20,76,133;
+}
+
+/*
+ * EJEMPLO DE EVENTO ALTERNATIVO
+ * Añade la clase stz-kaleido-aff--evento al contenedor para usarlo.
+ * También puedes sustituir sus valores por los de cualquier evento futuro.
+ */
+.stz-kaleido-aff.stz-kaleido-aff--evento {
+  --stz2-bg:url('https://i.servimg.com/u/f79/19/62/25/22/20260710.png');
+  --stz2-primary:#3b5ea7;
+  --stz2-secondary:#8d5cad;
+  --stz2-highlight:#d4b8ed;
+  --stz2-ink:#0b0b19;
+  --stz2-surface:#171525;
+  --stz2-surface-rgb:23,21,37;
+  --stz2-border:rgba(212,184,237,.38);
+  --stz2-primary-rgb:59,94,167;
+}
+
+.stz-kaleido-aff,
+.stz-kaleido-aff *,
+.stz-kaleido-aff *::before,
+.stz-kaleido-aff *::after { box-sizing:border-box !important; }
+
+.stz-kaleido-aff {
+  clear:both !important;
+  float:none !important;
+  display:block !important;
+  position:relative !important;
+  isolation:isolate !important;
+  overflow:hidden !important;
+  width:640px !important;
+  max-width:calc(100% - 24px) !important;
+  min-width:0 !important;
+  margin:34px auto !important;
+  padding:0 !important;
+  border:1px solid var(--stz2-border) !important;
+  border-radius:2px !important;
+  outline:7px solid rgba(7,17,28,.72) !important;
+  outline-offset:0 !important;
+  background:var(--stz2-surface) !important;
+  box-shadow:0 20px 55px rgba(0,0,0,.52),inset 0 0 0 1px rgba(255,255,255,.025) !important;
+  color:var(--stz2-text) !important;
+  font:400 13px/1.7 Montserrat,Arial,sans-serif !important;
+  text-align:left !important;
+  text-transform:none !important;
+}
+
+.stz-kaleido-aff * {
+  float:none !important;
+  min-width:0 !important;
+  max-width:none !important;
+  margin-top:0 !important;
+  text-indent:0 !important;
+  text-shadow:none !important;
+}
+
+.stz-kaleido-aff a { color:inherit !important; text-decoration:none !important; }
+.stz-kaleido-aff img { display:block !important; margin:0 !important; padding:0 !important; border:0 !important; background:transparent !important; }
+
+.stz-kaleido-aff__hero {
+  display:block !important;
+  position:relative !important;
+  overflow:hidden !important;
+  height:318px !important;
+  padding:26px 30px !important;
+  background:
+    linear-gradient(90deg,rgba(7,17,28,.96) 0%,rgba(7,17,28,.7) 48%,rgba(7,17,28,.15) 100%),
+    linear-gradient(0deg,var(--stz2-surface) 0%,transparent 42%),
+    var(--stz2-bg) center/cover no-repeat !important;
+}
+
+.stz-kaleido-aff__hero::before {
+  content:"" !important;
+  position:absolute !important;
+  inset:14px !important;
+  border:1px solid var(--stz2-border) !important;
+  pointer-events:none !important;
+}
+
+.stz-kaleido-aff__hero::after {
+  content:"" !important;
+  position:absolute !important;
+  right:-84px !important;
+  bottom:-120px !important;
+  width:310px !important;
+  height:310px !important;
+  border:1px solid var(--stz2-border) !important;
+  border-radius:50% !important;
+  box-shadow:0 0 0 18px rgba(var(--stz2-primary-rgb),.13),0 0 0 19px var(--stz2-border) !important;
+  pointer-events:none !important;
+}
+
+.stz-kaleido-aff__edition {
+  display:inline-flex !important;
+  position:relative !important;
+  z-index:2 !important;
+  align-items:center !important;
+  gap:9px !important;
+  margin:0 0 45px !important;
+  padding:6px 10px !important;
+  border:1px solid var(--stz2-border) !important;
+  background:rgba(var(--stz2-surface-rgb),.72) !important;
+  color:var(--stz2-highlight) !important;
+  font:600 8px/1.2 Montserrat,Arial,sans-serif !important;
+  letter-spacing:2.4px !important;
+  text-transform:uppercase !important;
+}
+
+.stz-kaleido-aff__edition::before {
+  content:"" !important;
+  display:block !important;
+  width:6px !important;
+  height:6px !important;
+  border-radius:50% !important;
+  background:linear-gradient(135deg,var(--stz2-primary),var(--stz2-secondary)) !important;
+  box-shadow:0 0 10px var(--stz2-highlight) !important;
+}
+
+.stz-kaleido-aff__overline {
+  display:block !important;
+  position:relative !important;
+  z-index:2 !important;
+  margin:0 0 3px !important;
+  color:var(--stz2-muted) !important;
+  font:500 9px/1.3 Montserrat,Arial,sans-serif !important;
+  letter-spacing:5px !important;
+  text-transform:uppercase !important;
+}
+
+.stz-kaleido-aff__name {
+  display:block !important;
+  position:relative !important;
+  z-index:2 !important;
+  width:max-content !important;
+  max-width:100% !important;
+  margin:0 !important;
+  background:linear-gradient(105deg,var(--stz2-text) 12%,var(--stz2-highlight) 58%,var(--stz2-secondary)) !important;
+  background-clip:text !important;
+  -webkit-background-clip:text !important;
+  color:transparent !important;
+  -webkit-text-fill-color:transparent !important;
+  font:600 65px/.95 "Playfair Display",Georgia,serif !important;
+  letter-spacing:-2px !important;
+}
+
+.stz-kaleido-aff__motto {
+  display:block !important;
+  position:relative !important;
+  z-index:2 !important;
+  width:330px !important;
+  max-width:80% !important;
+  margin:13px 0 0 !important;
+  padding-top:10px !important;
+  border-top:1px solid var(--stz2-border) !important;
+  color:var(--stz2-text) !important;
+  font:500 italic 14px/1.35 "Playfair Display",Georgia,serif !important;
+  letter-spacing:.5px !important;
+}
+
+.stz-kaleido-aff__body { display:block !important; position:relative !important; padding:0 30px 30px !important; }
+
+.stz-kaleido-aff__intro {
+  display:block !important;
+  position:relative !important;
+  z-index:3 !important;
+  margin:-28px 0 24px !important;
+  padding:21px 23px !important;
+  border-left:3px solid var(--stz2-secondary) !important;
+  background:linear-gradient(110deg,rgba(var(--stz2-primary-rgb),.3),rgba(var(--stz2-surface-rgb),.96) 58%) !important;
+  box-shadow:0 12px 26px rgba(0,0,0,.27) !important;
+  color:var(--stz2-muted) !important;
+  font:400 12px/1.75 Montserrat,Arial,sans-serif !important;
+  text-align:justify !important;
+}
+
+.stz-kaleido-aff__accent { color:var(--stz2-highlight) !important; font-weight:600 !important; }
+.stz-kaleido-aff__voice { color:var(--stz2-text) !important; font:500 italic 14px/1.55 "Playfair Display",Georgia,serif !important; }
+
+.stz-kaleido-aff__section { display:block !important; margin:0 0 26px !important; }
+.stz-kaleido-aff__section:last-child { margin-bottom:0 !important; }
+
+.stz-kaleido-aff__heading {
+  display:flex !important;
+  align-items:center !important;
+  gap:12px !important;
+  margin:0 0 15px !important;
+  color:var(--stz2-text) !important;
+  font:600 19px/1.2 "Playfair Display",Georgia,serif !important;
+  letter-spacing:.5px !important;
+}
+
+.stz-kaleido-aff__heading::before {
+  content:"" !important;
+  width:34px !important;
+  height:2px !important;
+  background:linear-gradient(90deg,var(--stz2-primary),var(--stz2-secondary)) !important;
+}
+
+.stz-kaleido-aff__heading-note {
+  margin-left:auto !important;
+  color:var(--stz2-muted) !important;
+  font:600 7px/1.2 Montserrat,Arial,sans-serif !important;
+  letter-spacing:2px !important;
+  text-transform:uppercase !important;
+}
+
+.stz-kaleido-aff__staff {
+  display:grid !important;
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  gap:10px !important;
+  font-size:0 !important;
+}
+
+.stz-kaleido-aff__staff-card {
+  display:block !important;
+  position:relative !important;
+  overflow:hidden !important;
+  height:178px !important;
+  border:1px solid var(--stz2-border) !important;
+  background:var(--stz2-ink) !important;
+}
+
+.stz-kaleido-aff__staff-card img {
+  width:100% !important;
+  height:100% !important;
+  object-fit:cover !important;
+  filter:saturate(.74) contrast(1.08) !important;
+  transition:filter .25s ease,transform .35s ease !important;
+}
+
+.stz-kaleido-aff__staff-card::after {
+  content:"" !important;
+  position:absolute !important;
+  inset:0 !important;
+  background:linear-gradient(0deg,rgba(7,17,28,.95),transparent 62%) !important;
+  pointer-events:none !important;
+}
+
+.stz-kaleido-aff__staff-card:hover img { filter:saturate(1) contrast(1.03) !important; transform:scale(1.035) !important; }
+
+.stz-kaleido-aff__staff-name {
+  display:block !important;
+  position:absolute !important;
+  z-index:2 !important;
+  right:9px !important;
+  bottom:10px !important;
+  left:9px !important;
+  color:var(--stz2-highlight) !important;
+  font:600 10px/1.25 Montserrat,Arial,sans-serif !important;
+  letter-spacing:.7px !important;
+  text-align:center !important;
+}
+
+.stz-kaleido-aff__nav {
+  display:grid !important;
+  grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+  gap:7px !important;
+  font-size:0 !important;
+}
+
+.stz-kaleido-aff__nav-link {
+  display:flex !important;
+  min-height:53px !important;
+  align-items:center !important;
+  justify-content:center !important;
+  padding:8px !important;
+  border:1px solid var(--stz2-border) !important;
+  background:rgba(var(--stz2-primary-rgb),.1) !important;
+  color:var(--stz2-muted) !important;
+  font:600 8px/1.35 Montserrat,Arial,sans-serif !important;
+  letter-spacing:1.5px !important;
+  text-align:center !important;
+  text-transform:uppercase !important;
+  transition:background .2s ease,border-color .2s ease,color .2s ease !important;
+}
+
+.stz-kaleido-aff__nav-link:hover {
+  border-color:var(--stz2-highlight) !important;
+  background:linear-gradient(135deg,var(--stz2-primary),var(--stz2-secondary)) !important;
+  color:#fff !important;
+}
+
+.stz-kaleido-aff__buttons {
+  display:grid !important;
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  gap:10px !important;
+  align-items:start !important;
+  font-size:0 !important;
+}
+
+.stz-kaleido-aff__button {
+  display:flex !important;
+  min-height:244px !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  padding:14px 11px 11px !important;
+  border:1px solid var(--stz2-border) !important;
+  background:linear-gradient(155deg,rgba(var(--stz2-primary-rgb),.17),rgba(7,17,28,.78)) !important;
+  font-size:12px !important;
+}
+
+.stz-kaleido-aff__size {
+  display:block !important;
+  align-self:flex-start !important;
+  margin:0 0 14px !important;
+  color:var(--stz2-muted) !important;
+  font:600 7px/1 Montserrat,Arial,sans-serif !important;
+  letter-spacing:1.8px !important;
+  text-transform:uppercase !important;
+}
+
+.stz-kaleido-aff__button img {
+  width:auto !important;
+  max-width:100% !important;
+  height:auto !important;
+  max-height:150px !important;
+  margin:auto auto 13px !important;
+  outline:1px solid var(--stz2-border) !important;
+  outline-offset:4px !important;
+}
+
+.stz-kaleido-aff__code {
+  display:block !important;
+  width:100% !important;
+  max-height:58px !important;
+  overflow:auto !important;
+  margin:0 !important;
+  padding:7px !important;
+  border:0 !important;
+  border-top:1px solid var(--stz2-border) !important;
+  border-radius:0 !important;
+  background:rgba(7,17,28,.78) !important;
+  color:var(--stz2-highlight) !important;
+  font:400 9px/1.4 Consolas,monospace !important;
+  letter-spacing:0 !important;
+  text-align:left !important;
+  text-transform:none !important;
+  white-space:pre-wrap !important;
+  overflow-wrap:anywhere !important;
+}
+
+.stz-kaleido-aff__footer {
+  display:flex !important;
+  align-items:center !important;
+  justify-content:space-between !important;
+  gap:14px !important;
+  padding:13px 30px !important;
+  border-top:1px solid var(--stz2-border) !important;
+  background:linear-gradient(90deg,rgba(var(--stz2-primary-rgb),.25),rgba(var(--stz2-surface-rgb),.92)) !important;
+  color:var(--stz2-muted) !important;
+  font:600 7px/1.3 Montserrat,Arial,sans-serif !important;
+  letter-spacing:2px !important;
+  text-transform:uppercase !important;
+}
+
+.stz-kaleido-aff__footer-mark { color:var(--stz2-highlight) !important; font:500 italic 14px/1 "Playfair Display",Georgia,serif !important; letter-spacing:0 !important; text-transform:none !important; }
+
+@media (max-width:560px) {
+  .stz-kaleido-aff { max-width:calc(100% - 16px) !important; outline-width:4px !important; }
+  .stz-kaleido-aff__hero { height:280px !important; padding:22px !important; }
+  .stz-kaleido-aff__edition { margin-bottom:38px !important; }
+  .stz-kaleido-aff__name { font-size:49px !important; }
+  .stz-kaleido-aff__body { padding:0 18px 20px !important; }
+  .stz-kaleido-aff__staff { grid-template-columns:repeat(3,minmax(0,1fr)) !important; gap:6px !important; }
+  .stz-kaleido-aff__staff-card { height:145px !important; }
+  .stz-kaleido-aff__nav { grid-template-columns:repeat(2,minmax(0,1fr)) !important; }
+  .stz-kaleido-aff__buttons { grid-template-columns:1fr !important; }
+  .stz-kaleido-aff__button { min-height:210px !important; }
+}
