@@ -247,8 +247,17 @@
   width:100% !important;
   height:100% !important;
   object-fit:cover !important;
-  filter:saturate(.74) contrast(1.08) !important;
+  pointer-events:none !important;
+  user-select:none !important;
+  -webkit-user-select:none !important;
+  -webkit-user-drag:none !important;
+  filter:grayscale(1) saturate(0) contrast(1.08) brightness(.78) !important;
   transition:filter .25s ease,transform .35s ease !important;
+}
+
+.stz-kaleido-aff__staff-card a {
+  pointer-events:none !important;
+  cursor:default !important;
 }
 
 .stz-kaleido-aff__staff-card::after {
@@ -259,7 +268,10 @@
   pointer-events:none !important;
 }
 
-.stz-kaleido-aff__staff-card:hover img { filter:saturate(1) contrast(1.03) !important; transform:scale(1.035) !important; }
+.stz-kaleido-aff__staff-card:hover img {
+  filter:grayscale(0) saturate(1.05) contrast(1.03) brightness(1) !important;
+  transform:scale(1.035) !important;
+}
 
 .stz-kaleido-aff__staff-name {
   display:block !important;
