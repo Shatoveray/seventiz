@@ -307,12 +307,14 @@
   display:grid !important;
   grid-template-columns:repeat(3,minmax(0,1fr)) !important;
   gap:10px !important;
-  align-items:start !important;
+  align-items:stretch !important;
   font-size:0 !important;
 }
 
 .stz-kaleido-aff__button {
   display:flex !important;
+  overflow:hidden !important;
+  height:100% !important;
   min-height:244px !important;
   flex-direction:column !important;
   align-items:center !important;
@@ -344,7 +346,10 @@
 
 .stz-kaleido-aff__code {
   display:block !important;
+  flex:0 0 58px !important;
   width:100% !important;
+  height:58px !important;
+  min-height:58px !important;
   max-height:58px !important;
   overflow:auto !important;
   margin:0 !important;
@@ -360,6 +365,18 @@
   text-transform:none !important;
   white-space:pre-wrap !important;
   overflow-wrap:anywhere !important;
+}
+
+.stz-kaleido-aff__code * {
+  margin:0 !important;
+  padding:0 !important;
+  background:transparent !important;
+  color:inherit !important;
+  font:inherit !important;
+  line-height:inherit !important;
+  letter-spacing:inherit !important;
+  text-transform:none !important;
+  white-space:inherit !important;
 }
 
 .stz-kaleido-aff__footer {
