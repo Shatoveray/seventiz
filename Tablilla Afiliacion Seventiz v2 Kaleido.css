@@ -431,6 +431,15 @@
   white-space:inherit !important;
 }
 
+/* Foroactivo puede insertar un <br> y espacios de formato antes de [code]. */
+div.stz-kaleido-aff__code {
+  white-space:normal !important;
+}
+
+.stz-kaleido-aff__code > br {
+  display:none !important;
+}
+
 /* Aísla el bloque [code] nativo de los estilos particulares de cada foro. */
 .stz-kaleido-aff__code dl.codebox {
   display:block !important;
@@ -533,8 +542,8 @@
   white-space:pre-wrap !important;
   overflow-wrap:anywhere !important;
   cursor:text !important;
-  user-select:text !important;
-  -webkit-user-select:text !important;
+  user-select:all !important;
+  -webkit-user-select:all !important;
 }
 
 .stz-kaleido-aff__footer {
