@@ -313,7 +313,7 @@
 }
 
 .stz-kaleido-aff__staff-name::after {
-  content:"Rey de Vireldar, Guardián del continente y artifice de las historias que mantienen vivo a Seventiz" !important;
+  content:"Rey de Vireldar, Guardián del continente y artifice de las historias que mantien vivo Seventiz." !important;
   display:block !important;
   width:100% !important;
   margin:17px 0 0 !important;
@@ -429,6 +429,112 @@
   letter-spacing:inherit !important;
   text-transform:none !important;
   white-space:inherit !important;
+}
+
+/* Aísla el bloque [code] nativo de los estilos particulares de cada foro. */
+.stz-kaleido-aff__code dl.codebox {
+  display:block !important;
+  position:static !important;
+  width:100% !important;
+  min-width:0 !important;
+  height:auto !important;
+  min-height:0 !important;
+  margin:0 !important;
+  padding:0 !important;
+  overflow:visible !important;
+  border:0 !important;
+  border-radius:0 !important;
+  outline:0 !important;
+  box-shadow:none !important;
+  background:transparent !important;
+  color:inherit !important;
+}
+
+.stz-kaleido-aff__code dl.codebox::before,
+.stz-kaleido-aff__code dl.codebox::after,
+.stz-kaleido-aff__code dl.codebox dt::before,
+.stz-kaleido-aff__code dl.codebox dt::after,
+.stz-kaleido-aff__code dl.codebox dt a::before,
+.stz-kaleido-aff__code dl.codebox dt a::after {
+  display:none !important;
+  content:none !important;
+}
+
+.stz-kaleido-aff__code dl.codebox dt {
+  display:flex !important;
+  position:static !important;
+  align-items:center !important;
+  justify-content:space-between !important;
+  gap:6px !important;
+  width:100% !important;
+  min-height:10px !important;
+  margin:0 0 4px !important;
+  padding:0 0 3px !important;
+  border:0 !important;
+  border-bottom:1px solid var(--stz2-border) !important;
+  background:transparent !important;
+  color:var(--stz2-muted) !important;
+  font:600 6px/1 Montserrat,Arial,sans-serif !important;
+  font-style:normal !important;
+  letter-spacing:.8px !important;
+  text-transform:uppercase !important;
+  white-space:normal !important;
+}
+
+.stz-kaleido-aff__code dl.codebox dt a {
+  display:inline !important;
+  position:static !important;
+  width:auto !important;
+  height:auto !important;
+  margin:0 !important;
+  padding:0 !important;
+  border:0 !important;
+  background:transparent !important;
+  color:var(--stz2-highlight) !important;
+  font:inherit !important;
+  letter-spacing:inherit !important;
+  text-decoration:none !important;
+  text-transform:inherit !important;
+  white-space:nowrap !important;
+  cursor:pointer !important;
+}
+
+.stz-kaleido-aff__code dl.codebox dd {
+  display:block !important;
+  position:static !important;
+  width:100% !important;
+  min-width:0 !important;
+  height:auto !important;
+  min-height:0 !important;
+  margin:0 !important;
+  padding:0 !important;
+  overflow:visible !important;
+  border:0 !important;
+  background:transparent !important;
+}
+
+.stz-kaleido-aff__code dl.codebox code {
+  display:block !important;
+  position:static !important;
+  width:100% !important;
+  min-width:0 !important;
+  height:auto !important;
+  min-height:0 !important;
+  margin:0 !important;
+  padding:0 !important;
+  overflow:visible !important;
+  border:0 !important;
+  background:transparent !important;
+  color:var(--stz2-highlight) !important;
+  font:400 9px/1.4 Consolas,monospace !important;
+  letter-spacing:0 !important;
+  text-align:left !important;
+  text-transform:none !important;
+  white-space:pre-wrap !important;
+  overflow-wrap:anywhere !important;
+  cursor:text !important;
+  user-select:text !important;
+  -webkit-user-select:text !important;
 }
 
 .stz-kaleido-aff__footer {
