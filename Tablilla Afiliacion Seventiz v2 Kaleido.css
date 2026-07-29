@@ -313,7 +313,7 @@
 }
 
 .stz-kaleido-aff__staff-name::after {
-  content:"Guardián del Primer Árbol, Rey de Vireldar y artífice de las historias que mantienen vivo a Seventiz" !important;
+  content:"Rey de Vireldar, Guardián del continente y artifice de las historias que mantienen vivo a Seventiz" !important;
   display:block !important;
   width:100% !important;
   margin:17px 0 0 !important;
@@ -356,6 +356,7 @@
 .stz-kaleido-aff__buttons {
   display:grid !important;
   grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  grid-auto-rows:270px !important;
   gap:10px !important;
   align-items:stretch !important;
   font-size:0 !important;
@@ -364,8 +365,9 @@
 .stz-kaleido-aff__button {
   display:flex !important;
   overflow:hidden !important;
-  height:100% !important;
-  min-height:244px !important;
+  height:270px !important;
+  min-height:270px !important;
+  max-height:270px !important;
   flex-direction:column !important;
   align-items:center !important;
   padding:14px 11px 11px !important;
@@ -456,6 +458,13 @@
   .stz-kaleido-aff__staff-name { padding:20px !important; font-size:20px !important; }
   .stz-kaleido-aff__staff-name::after { margin-top:13px !important; padding-top:12px !important; font-size:11px !important; }
   .stz-kaleido-aff__nav { grid-template-columns:repeat(2,minmax(0,1fr)) !important; }
-  .stz-kaleido-aff__buttons { grid-template-columns:1fr !important; }
-  .stz-kaleido-aff__button { min-height:210px !important; }
+  .stz-kaleido-aff__buttons {
+    grid-template-columns:1fr !important;
+    grid-auto-rows:270px !important;
+  }
+  .stz-kaleido-aff__button {
+    height:270px !important;
+    min-height:270px !important;
+    max-height:270px !important;
+  }
 }
